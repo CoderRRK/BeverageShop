@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageDiscountView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/discount_main_image"
+            tools:ignore="ContentDescription,ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/textDiscountView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="45dp"
+            android:rotation="-7"
+            android:shadowColor="@color/black"
+            android:shadowDx="2"
+            android:shadowDy="2"
+            android:shadowRadius="15"
+            android:text="@string/sale_inscription"
+            android:textColor="@color/gold"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+
+        <TextView
+            android:id="@+id/textCategoriesView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="295dp"
+            android:gravity="start"
+            android:layout_below="@id/textDiscountView"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="@string/categories" />
+
+        <Spinner
+            android:id="@+id/spinnerCategories"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/textCategoriesView"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/textItemView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="335dp"
+            android:gravity="start"
+            android:layout_below="@id/spinnerCategories"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:text="@string/item" />
+
+        <Spinner
+        android:id="@+id/spinnerItem"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+            android:layout_below="@id/textItemView"
+            tools:ignore="SpeakableTextPresentCheck"/>
+
+        <ImageView
+            android:id="@+id/imageItemView"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_below="@id/spinnerItem"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/todo"
+            app:srcCompat="@drawable/tea_tess_earl_grey" />
+
+        <TextView
+            android:id="@+id/textOrderPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:text="@string/order_price"
+            android:layout_below="@id/imageItemView" />
+
+        <TextView
+            android:id="@+id/textQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+
+            android:text="@string/quantity"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            app:layout_constraintLeft_toRightOf="@id/textOrderPrice"
+            android:layout_marginStart="265dp"
+            android:layout_below="@id/imageItemView" />
+
+        <TextView
+            android:id="@+id/priceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textOrderPrice"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="5dp"
+            android:text="@string/cost"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/quantityTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textQuantity"
+            android:layout_marginStart="305dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/select_quantity"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/buttonPlus"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/textQuantity"
+            android:layout_marginStart="335dp"
+            android:background="@drawable/rounded_button"
+            android:onClick="increaseQuantity"
+            android:text="@string/button_plus"
+            tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+        <Button
+            android:id="@+id/buttonMinus"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/textQuantity"
+            android:layout_marginStart="242dp"
+            android:background="@drawable/rounded_button"
+            android:onClick="decreaseQuantity"
+            android:text="@string/button_minus"
+            tools:ignore="TextContrastCheck" />
+
+
+        <EditText
+            android:id="@+id/editTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/priceTextView"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:hint="@string/hint_person_name"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/editTextAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextPersonName"
+            android:ems="10"
+            android:hint="@string/hint_address"
+            android:importantForAutofill="no"
+            android:inputType="textPostalAddress"
+            android:textSize="20sp"
+            tools:ignore="TextContrastCheck" />
+
+        <EditText
+            android:id="@+id/editTextPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editTextAddress"
+            android:autofillHints="+7(***) *** ** **"
+            android:ems="10"
+            android:hint="@string/hint_phone_number"
+            android:inputType="phone"
+            android:textSize="20sp"
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+        <Button
+            android:id="@+id/addToCartButton"
+            android:onClick="addToCart"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/editTextPhoneNumber"
+            android:text="@string/add_cart"
+            android:layout_marginTop="5dp"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_button" />
+
+    </RelativeLayout>
+
+
+

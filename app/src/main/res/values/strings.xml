@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Магазин напитков</string>
+    <string name="add_cart">Заказать</string>
+    <string name="hint_phone_number">Номер вашего мобильного</string>
+    <string name="hint_address">Ваш адрес</string>
+    <string name="hint_person_name">Ваше имя</string>
+    <string name="quantity">Количество</string>
+    <string name="order_price">Стоимость заказа</string>
+    <string name="item">Товар</string>
+    <string name="categories">Категории</string>
+    <string name="sale_inscription">Распродажа до -30%</string>
+    <string name="button_minus">-</string>
+    <string name="button_plus">+</string>
+    <string name="cost">0₽</string>
+    <string name="select_quantity">0</string>
+    <string name="todo">TODO</string>
+    <string name="send_order">Отправить заказ</string>
+
+</resources>
