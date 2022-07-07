@@ -1,28 +1,23 @@
 package android.example.beverageshop;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModel;
 import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
-import android.widget.SpinnerAdapter;
 import android.widget.TextView;
 
-import java.net.CookieHandler;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 
-
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+
 
     int quantity = 0;
     Spinner spinnerCategories;
@@ -33,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     ArrayAdapter spinnerAdapterItem;
     String itemName;
     HashMap itemMap;
-    double price;
+    double price; 
     EditText userName;
     EditText address;
     EditText phoneNumber;
@@ -42,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
         setContentView(R.layout.activity_main);
         userName = findViewById(R.id.editTextPersonName);
